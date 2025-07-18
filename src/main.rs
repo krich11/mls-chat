@@ -196,7 +196,7 @@ impl MlsChatApp {
 
     /// Add a member to an existing group
     fn add_member(&mut self, group_name: String, member: UserName) -> Result<()> {
-        let user = self.current_user.context("No user initialized")?;
+        let _user = self.current_user.context("No user initialized")?;
         println!("{}", "Adding member to group...".green());
         
         let group = self.groups.get_mut(&group_name)
